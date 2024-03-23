@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="login.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Account Website</title>
+</head>
+<body>
+  <div class="cssMainDiv jsMainDiv">
+    <p class="cssMainText signup jsMainText">
+      Login form - Sign up
+    </p>
+    <p class="cssAccountText jsAccountText">
+
+    </p>
+    <div class="cssInputDiv">
+      <input type="text" placeholder="Enter your name" class="cssInput signup jsNameInput">
+    </div>
+    <div class="cssInputDiv">
+      <input type="password" placeholder="Enter your password" class="cssInput signup jsPasswordInput">
+      <button class="cssViewPassword jsViewPassword" onclick="viewPassword()">    
+        <img src="viewIcon.png" class="cssViewIcon">
+      </button>
+    </div>
+    <button class="cssLoginButton signup jsLoginButton" onclick="mainAction(documentClasses.nameElement, documentClasses.passwordElement)">
+      Sign up
+    </button>
+    <button class="cssLoginButton signup jsIHaveAccount" onclick="transformPage()">
+      I have an account
+    </button>
+    <div class="imageInputDiv">
+      <input type="file" class="cssImageInput jsImageInput" accept="image/*">
+      <label for="jsImageInput" class="cssLabelForImageInput jsLabelForImageInput">
+        Choose file
+      </label>
+      <button class="cssImageInputLoadButton jsImageInputLoadButton" onclick="imageAddAction()">
+        Load image
+      </button>
+    </div>
+  </div>
+  <script src="login.js"></script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Todo List</title>
+</head>
+<body>
+  <p>
+    Todo List Practice 2
+  </p>
+  <input type="text" placeholder="Todo name" class="jsTodoInput">
+  <button onclick="addToList()">
+    Add
+  </button>
+  <div class="jsTodoList"></div>
+  <script>
+    const jsTodoInput = document.querySelector(`.jsTodoInput`);
+    const TodoList = [];
+  
+
+    const addToList= function() {
+      TodoList.push(jsTodoInput.value)
+      console.log(TodoList);
+      renderTodoList()
+    }
+
+    let TodoListHTML = ``;
+
+    const renderTodoList = function() {
+      for (let i = 0; i < TodoList.length; i++) {
+      const todo = TodoList[i];
+      const html = `
+        <p>
+          ${todo}
+          <button onclick="
+            todoList.splice(${i}, 1);
+            renderTodoList();
+          ">   
+            Delete
+          </button>  
+        <p>
+        
+        `
+      TodoListHTML += html
+      } 
+      document.querySelector(`.jsTodoList`)
+        .innerHTML = TodoListHTML;
+  }
+  </script>
+</body>
+</html>

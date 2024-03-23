@@ -1,0 +1,30 @@
+html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: black;
+  flex-direction: column;
+}
+
+p {
+  margin: 0 0 5px 0;
+  color: white;
+  font-family: Arial;
+  font-weight: bold;
+}
+
+.cssTimerDisplay {
+  font-size: 100px;
+  color: white;
+  font: Arial bold;
+  margin: 0 0 12px 0;
+}
+

@@ -1,0 +1,104 @@
+html {
+  height: 90%;
+}
+
+body {
+  background-image: linear-gradient(to right, rgb(27, 99, 12), rgb(25, 153, 46));
+  transition: 0.5s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+p {
+  margin: 0;
+}
+
+.mainDiv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 50px;
+  height: 100%;
+}
+
+.slotButton {
+  height: 100px;
+  width: 100px;
+  background-color: white;
+  border: 3px solid;
+  font-size: 50px;
+  margin: 0 0 0 0;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+.slotButton:hover {
+  background-color: lightgray;  
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.gridDiv {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 10px;
+  row-gap: 10px;
+  background-color: rgba(0, 0, 0, 0);
+  padding: 10px;
+}
+
+.gridRow {
+  flex: 1;
+}
+
+.otherButtonsDiv {
+  display: flex;
+  background-color: rgba(0, 0, 0, 0);
+  border-radius: 0px 0px 20px 20px;
+}
+
+.otherButtons {
+  flex: 1;
+  border: none;
+  background-color: rgba(0, 0, 0, 0);
+  color: white;
+  transition: 0.3s;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 18px;
+  padding: 10px;
+}
+.otherButtons:hover {
+  padding: 20px 10px;
+  font-weight: bold;
+}
+.otherButtons:active {
+  opacity: 0.6;
+}
+
+
+.statsDiv {
+  background-color: rgba(0, 0, 0, 0);
+  border-radius: 20px 20px 0px 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+
+.stats {
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  font-family: Arial;
+}
+
+.containerDiv {
+  display: flex;
+  flex-direction: column;
+  border-radius: 20px 20px 20px 20px;
+  background-color: lightgreen;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 1);;
+}

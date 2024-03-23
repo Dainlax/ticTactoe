@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Advanced Functions</title>
+</head>
+<body>
+  <button class="jsButton">
+    Click
+  </button>
+  <script>
+    /*
+    function greeting() {
+      console.log(`hello`);
+    }
+
+    greeting();
+
+    const num = 2;
+
+    const function1 = function() {
+      console.log(`hello1`);
+    };
+
+    console.log(function1);
+    console.log(typeof function1);
+
+    function1()
+
+    const object1 = {
+      num: 2,
+      fun: function() {
+        console.log(`hello3`);
+      }
+    };
+
+  object1.fun()
+
+  const display = function(param) {
+    console.log(param);
+  }
+  display(2)
+
+  const run = function(param) {
+
+  }
+  */
+
+  /*
+  setTimeout(function(){
+    console.log(`timeout`);
+  }, 3000);
+
+  console.log(`next line`)
+
+  setInterval(function() {
+    console.log(`interval`);
+  }, 3000);
+
+  console.log(`next line 2`);
+  */
+  
+  /*
+  [
+    `make dinner`,
+    `wash dishes`,
+    `watch yotube`
+  ].forEach(function(value, index) {
+    console.log(value);
+    console.log(index);
+  })
+  */
+  /*
+  const regularFunction = function(param, param2) {
+    console.log('hello');
+    return 5;
+  };
+
+  const arrowFunction = (param, param2) => {
+    console.log('hello');
+    return 5;
+  };
+
+  const oneParam = param => {
+    console.log(param + 1);
+  };
+  oneParam(2)
+
+  const oneLine = () => 2 + 3;
+  console.log(oneLine());
+
+  const object2 = {
+    method: () => {
+
+    },
+    method() {
+
+    }
+  }
+  */
+  /*
+  const buttonElement = document.querySelector(`.jsButton`);
+  buttonElement.addEventListener("click", () => {
+    console.log(`yay`);
+  })
+
+  buttonElement.addEventListener("click", () => {
+    console.log(`click2`);
+  })
+  buttonElement.removeEventListener('click', () =>)
+  */
+
+  console.log([1, -3 , 5].filter((value, index) => {
+    return value >=0;
+
+
+  }));
+
+  console.log([1, 1, 3].map((value, index) => {
+    return value * 2;
+  }));
+
+  console.log([1, 1, 3].map(value => value * 2));
+  </script>
+</body>
+</html>

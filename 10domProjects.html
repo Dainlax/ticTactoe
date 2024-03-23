@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body {
+      font-family: Arial;
+    }
+
+    .cssSubscribe {
+      border: none;
+      background-color: black;
+      color: white;
+      padding: 10px 14px;
+      font-weight: bold;
+      border-radius: 20px;
+      cursor: pointer;
+      margin: 0 0 30px 0;
+    }
+
+    .cssSubscribed {
+      background-color: rgb(238, 238, 238);
+      color: black;
+      border: none;
+      padding: 10px 14px;
+      font-weight: bold;
+      border-radius: 20px;
+      cursor: pointer;
+    }
+
+    .cssCostInput {
+      font-size: 15px;
+      border: 1px solid gray;
+      padding: 10px;
+      border-radius: 5px;
+    }
+
+    .calculateButton {
+      background-color: green;
+      border: none;
+      color: white;
+      padding: 12px;
+      font-size: 15px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <p>
+    YouTube Subscribe Button
+  </p>
+  <button onclick="subscribe()" class="subscribeButton cssSubscribe" >
+    Subscribe
+  </button>
+
+  <p>
+    Amazon Shipping Calculator
+  </p>
+  <p>
+    Orders under 40$ = +10$ Shipping.
+  </p>
+  <p>
+    Order over 40$ = FREE shipping
+  </p>
+  <input type="text" placeholder="Cost of order" class="costInput cssCostInput" onkeydown="event.key === 'Enter' ? calculate() : ``">
+  <button onclick="calculate()" class="calculateButton" >
+    Calculate
+  </button>
+  <p class="totalCost"></p>
+
+  <script>
+    const subscribeElement = document.querySelector(`.subscribeButton`);
+    subscribeElement.textContent = `Subscribe`;
+    const subscribe = function() {
+      if (subscribeElement.textContent == `Subscribe`) {
+        subscribeElement.textContent = `Subscribed`;
+        subscribeElement.classList.add(`cssSubscribed`)
+      }
+      else {
+        subscribeElement.textContent = `Subscribe`;
+        subscribeElement.classList.remove(`cssSubscribed`)
+      }
+    }
+
+    const calculate = function() {
+      const inputElement = document.querySelector(`.costInput`);
+      let cost = Number(inputElement.value);
+      if (inputElement.value < 40) {
+        cost += 10
+      }
+      document.querySelector(`.totalCost`).textContent = `$${cost}`
+
+    }
+  </script>
+</body>
+</html>

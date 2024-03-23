@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <p>
+    YouTube Subscribe Button
+  </p>
+  <button onclick="subscribe()" class="subscribeButton" >
+    Subscribe
+  </button>
+
+  <p>
+    Amazon Shipping Calculator
+  </p>
+  <p>
+    Orders under 40$ = +10$ Shipping.
+  </p>
+  <p>
+    Order over 40$ = FREE shipping
+  </p>
+  <input type="text" placeholder="Cost of order" class="costInput" onkeydown="event.key === 'Enter' ? calculate() : ``">
+  <button onclick="calculate()" >
+    Calculate
+  </button>
+  <p class="totalCost"></p>
+
+  <script>
+    const subscribeElement = document.querySelector(`.subscribeButton`);
+    subscribeElement.textContent = `Subscribe`;
+    const subscribe = function() {
+      if (subscribeElement.textContent == `Subscribe`) subscribeElement.textContent = `Subscribed`;
+      else subscribeElement.textContent = `Subscribe`;
+    }
+
+    const calculate = function() {
+      const inputElement = document.querySelector(`.costInput`);
+      let cost = Number(inputElement.value);
+      if (inputElement.value < 40) {
+        cost += 10
+      }
+      document.querySelector(`.totalCost`).textContent = `$${cost}`
+
+    }
+  </script>
+</body>
+</html>

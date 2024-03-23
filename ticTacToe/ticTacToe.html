@@ -8,7 +8,12 @@
 </head>
 <body>
   <div class="mainDiv">
-    <div>
+    <div class="containerDiv">
+      <div class="statsDiv">
+        <p class="stats">
+          X wins: 0. O wins: 0. Ties: 0
+        </p>
+      </div>
       <div class="gridDiv"> 
           <button onclick="slotAction(0)" class="slotButton slot1"></button>
           <button onclick="slotAction(1)"  class="slotButton slot2"></button>
@@ -22,6 +27,7 @@
       </div>  
       <div class="otherButtonsDiv">
         <button onclick="restartGame()" class="otherButtons">Restart game</button>
+        <button onclick="resetScore()" class="otherButtons">Reset score</button>
       </div>
     </div>
   </div>
